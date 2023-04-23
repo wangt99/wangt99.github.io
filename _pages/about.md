@@ -6,7 +6,7 @@ subtitle: <a href='https://www.cqupt.edu.cn/'>Chongqing University of Posts and 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile.jpg
   image_circular: true # crops the image to make it circular
   address: >
 
