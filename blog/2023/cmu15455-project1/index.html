@@ -23,7 +23,7 @@
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Slab:100,300,400,500,700%7CMaterial+Icons">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
     <!-- Code Syntax Highlighting -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
@@ -80,9 +80,6 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/projects/">projects</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/cv/">cv</a>
-              </li>
 
               <!-- Toogle theme mode -->
               <li class="toggle-container">
@@ -131,7 +128,35 @@
   </header>
 
   <article class="post-content">
-    <p>这是测试！！！</p>
+    <h2 id="task1-实现lru-k算法">Task1 实现LRU-K算法</h2>
+
+<p>实验中共有三种Replacer算法，本次主要实现基于LRU-K的替换算法</p>
+
+<p>| Category |
+| — |
+| LRU |
+| LRU-K |
+| Clock |</p>
+<h3 id="前言">前言</h3>
+
+<ol>
+  <li>lru-k是什么？</li>
+</ol>
+
+<p>LRU-K算法是一种改进的最近最少使用（Least Recently Used, LRU）算法，它在LRU算法的基础上增加了一个参数K（K&gt;1），用于控制缓存中每个节点的最小访问次数。具体而言，LRU-K算法是根据节点的访问历史记录进行缓存替换的，当需要替换缓存中的一个节点时，先检查缓存中所有节点的访问次数，将访问次数小于K的节点全部剔除，然后在剩余节点中选取最近最少使用的节点进行替换。</p>
+
+<ol>
+  <li>改进目的</li>
+</ol>
+
+<p>LRU-K算法的目的是为了减少缓存中的“死节点”，即虽然已经很久没有使用过的节点仍然一直占据着缓存的空间，导致缓存效率低下。通过设置K值来控制节点的最小访问次数，可以减少缓存中的“死节点”，使缓存能够更加有效地利用空间。</p>
+
+<p>在缓存中会出现“死节点”的情况，是因为缓存被设计为能够保存最近被使用的数据，而不是依据数据本身的重要程度或者访问频率。当一个数据在缓存中被放置很久时间，但很少被使用时，就会出现“死节点”的情况，即占据了宝贵的缓存空间，但没有为系统带来实际的效率提升。造成缓存“死节点”的主要原因是数据访问模式的不稳定性，有些数据在某个时间段内的访问非常频繁，但突然间就不再被访问了，而此时缓存中仍然保存着这些数据。这种情况可能是因为时间、空间或其他因素的变化导致的，例如数据的热度变化、访问模式的变化等等。如果没有及时清理缓存中的“死节点”，就会影响缓存的效率，甚至会使整个系统的性能下降。因此，需要使用一些算法来避免或减少缓存的“死节点”，例如LRU-K算法、LFU算法等等。</p>
+
+<p>参考资料:</p>
+<ul>
+  <li><a href="http://www.cs.iit.edu/~yee/classes/cs525aut04/oneil93lruk.pdf" rel="external nofollow noopener" target="_blank">The LRU-K Page Replacement Algorithm For Database Disk Buffering</a></li>
+</ul>
 
   </article>
 </div>
@@ -142,7 +167,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2023 Yueming  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: April 25, 2023.
+Last updated: May 16, 2023.
       </div>
     </footer>
 

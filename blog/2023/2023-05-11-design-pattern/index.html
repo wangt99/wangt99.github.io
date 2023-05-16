@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<h1 id="设计模式">设计模式</h1>
+
+<ul>
+  <li>创建型</li>
+  <li>结构型</li>
+  <li>行为</li>
+</ul>
+
+<h2 id="创建型">创建型</h2>
+
+<p>创建型模式提供了<strong>创建对象的机制</strong>， 能够提升已有代码的<strong>灵活性</strong>和<strong>可复用性</strong>。</p>
+
+<h3 id="工厂方法也称虚构造">工厂方法（也称虚构造）</h3>
+
+<p>其在父类中提供一个创建对象的方法， 允许子类决定实例化对象的类型。</p>
+
+<p><strong>问题</strong></p>
+
+<p>假设你正在开发一项物流管理应用。最初版本只能处理卡车，因此大部分代码都位于卡车类中。随着物流业务壮大，需要海运处理。然而，大部分代码与卡车相关，添加轮船又需要修改全部代码。你将不得不编写繁复的代码对不同类进行不同处理。</p>
+
+<p><strong>解决方案</strong></p>
+
+<p>工厂方法模式建议使用特殊的<em>工厂</em>方法代替对于对象构造函数的直接调用 。</p>
+
+<p>调用工厂方法的代码 （通常被称为<em>客户端</em>代码） 无需了解不同子类返回实际对象之间的差别。 客户端将所有产品视为<strong>抽象</strong>的 <code class="language-plaintext highlighter-rouge">运输</code> 。 客户端知道所有运输对象都提供 <code class="language-plaintext highlighter-rouge">交付</code>方法， 但是并<strong>不关心其具体实现方式</strong></p>
+
+<h3 id="抽象工厂">抽象工厂</h3>
+
+<p>创建一系列相关的对象， 而无需指定其具体类。</p>
+
+<h3 id="单例">单例</h3>
+
+<p>单例模式同时解决两个问题（违反单一责任原则）：</p>
+
+<ul>
+  <li>保证一个类只有一个实例</li>
+  <li>为该实例提供一个全局访问节点</li>
+</ul>
+
+<p>一般的实现方案：</p>
+
+<ul>
+  <li>将构造函数设为私有，防止其他使用单例类<code class="language-plaintext highlighter-rouge">new</code>一个新的对象</li>
+  <li>新建一个静态成员函数作为构造函数。</li>
+  <li>
+</li>
+</ul>
+
+</body></html>
