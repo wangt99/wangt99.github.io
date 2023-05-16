@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 分布式系统系列-00
+title: distribution-system-from-scratch-00
 date: 2023-05-09
-tags: 理论
-categories: "分布式 system“ 
+tags: theory
+categories: "distribution-system“ 
 ---
 
  # 从零开始的分布式
